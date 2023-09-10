@@ -1,14 +1,17 @@
+// function returns computer selection
 function computerSelection() {
   const selections = ["rock", "paper", "scissor"];
   const randomNum = Math.round(Math.random() * (selections.length - 1));
   return selections[randomNum];
 }
 
+// function returns player selection
 function playerSelection() {
   const selection = prompt("Choose between Rock, Paper and Scissor?");
   return selection.toLowerCase();
 }
 
+// function holds the game logic
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log("A Tie.");
@@ -27,6 +30,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+// function plays the 5 times.
 function game() {
   for (let i = 0; i < 5; i++) {
     playRound(playerSelection(), computerSelection());
